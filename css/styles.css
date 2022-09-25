@@ -69,9 +69,7 @@ button {
 .partlogo {
   color: var(--accent-color);
 }
-.logo-container {
-  display: flex;
-}
+
 /* Хедер Посилання на інші сторінки сайту емейл та телефон */
 /* Общий родитель */
 .main-nav {
@@ -83,8 +81,16 @@ button {
   margin-left: 93px;
 }
 .site-nav.panel {
+  display: flex;
   margin-left: auto;
   padding-left: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-nav .item {
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .site-nav .link {
@@ -93,14 +99,17 @@ button {
 
   color: var(--primary-text-color);
 }
+
+.contact {
+  text-align: center;
+}
+
 .site-nav .contact {
+  display: flex;
+  align-items: center;
   color: var(--title-text-color);
 }
-.site-nav .item {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
+
 .site-nav {
   display: flex;
 }
@@ -131,7 +140,7 @@ button {
   text-decoration: none;
 }
 
-contact-link {
+.contact-link {
   fill: currentColor;
   margin-right: 10px;
 }
@@ -267,7 +276,8 @@ ul {
   background-color: var(--section-background-color);
 }
 .team-card {
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
@@ -298,8 +308,8 @@ ul {
 .social {
   display: flex;
   justify-content: center;
+  gap: 10px;
 }
-
 
 .social-link {
   display: flex;
@@ -308,18 +318,67 @@ ul {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  color: var(--fill-icon);
+}
+
+.social-icon {
+  fill: var(--fill-icon);
+}
+
+.social-link:hover .social-icon {
+  fill: var(--white-text-color);
 }
 
 .social-link:hover,
 .social-link:focus {
-  color: var(--white-text-color);
+  fill: var(--white-text-color);
   background-color: var(--accent-color);
 }
-.social-link {
-  fill: currentColor;
+
+/* Партнери */
+
+.our-clients {
+  text-align: center;
+  justify-content: center;
 }
 
+/* Рамка для партнерських лого */
+
+.our-partners {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* список li */
+
+.our-partners-link {
+  display: flex;
+  width: 170px;
+  height: 90px;
+  justify-content: center;
+  border: 1px solid var(--fill-icon);
+  border-radius: 4px;
+  margin: 0 auto;
+}
+
+/* Розмір лого, та фокус */
+
+/* Hover focus на посилання */
+
+.our-partners-logo {
+  fill: var(--fill-icon);
+}
+
+.our-partners-logo:hover,
+.our-partners-logo:focus {
+  fill: var(--accent-color);
+}
+
+.our-partners-link:hover,
+.our-partners-link:focus {
+  border: 1px solid var(--accent-color);
+  fill: var(--accent-color);
+}
 
 /* Приклади робіт */
 
@@ -333,15 +392,21 @@ ul {
   margin-left: 8px;
 }
 
+.element:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.shadow-item:focus,
+.shadow-item:hover {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
 .partners {
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
-}
-
-.element {
-  border: 1px solid #EEEEEE;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .title.examples {
@@ -402,12 +467,55 @@ ul {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+.footer .container {
+  display: flex;
+}
+
 .address {
   margin-top: 20px;
 }
 
 .footer-link:not(:last-child) {
   margin-bottom: 9px;
+}
+.footer-block {
+  display: flex;
+  align-items: center;
+}
+
+/* Футер иконки */
+
+.join-block {
+  margin-left: 156px;
+}
+
+.footer-text {
+  margin-bottom: 20px;
+  color: var(--white-text-color);
+  font-weight: 700;
+  line-height: 1.17;
+  text-transform: uppercase;
+}
+
+.footer-join-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.footer-social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white-text-color);
+}
+.footer-social-link:focus,
+.footer-social-link:hover {
+  background-color: var(--accent-color);
 }
 
 /* Приховані заголовки */
