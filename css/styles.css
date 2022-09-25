@@ -8,6 +8,7 @@
   --blok-background-color: #eeeeee;
   --footer-color: #2f303a;
   --border-line: #ececec;
+  --fill-icon: #afb1b8;
 }
 
 h1,
@@ -130,6 +131,11 @@ button {
   text-decoration: none;
 }
 
+contact-link {
+  fill: currentColor;
+  margin-right: 10px;
+}
+
 ul {
   list-style: none;
 }
@@ -145,7 +151,7 @@ ul {
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
-} 
+}
 
 .overlay {
   max-width: 1600px;
@@ -155,9 +161,9 @@ ul {
   margin-right: auto;
   background-position: center;
   background-size: cover;
-  background-color: #C4C4C4;
-background-image: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)),
-url(../images/hero.jpg);
+  background-color: #c4c4c4;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero.jpg);
 }
 
 .main-headline {
@@ -203,43 +209,24 @@ url(../images/hero.jpg);
 .list.advantage {
   display: flex;
 }
-.list-item::before {
-  content:"";
-  width: 270px;
-  height: 120px;
-  display: block;
-  background-size: 30%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: var(--section-background-color);
-  border-radius: 4px;
-  margin-bottom: 30px;
- 
-}
-
-
-.icon-antenna::before {
-  background-image: url(../images/antenna.svg);
-}
-
-.icon-clock::before {
-  background-image: url(../images/clock.png);
-
-}
-
-.icon-diagram::before {
-  background-image: url(../images/diagram.png);
-}
-
-.icon-astronaut::before {
-  background-image: url(../images/astronaut.png);
-}
-
 .advantage .item + .item,
 .our-work .item + .item,
 .team .item + .item {
   margin-left: 30px;
 }
+
+.icon-block {
+  display: flex;
+  width: 270px;
+  height: 120px;
+  padding: 0;
+  background-color: var(--section-background-color);
+  border-radius: 4px;
+  background-position: center;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
 .title-capletters {
   margin-bottom: 10px;
   font-weight: 700;
@@ -247,6 +234,7 @@ url(../images/hero.jpg);
   line-height: 1.14;
   text-transform: uppercase;
 }
+
 /* Наші роботи */
 .list.our-work {
   display: flex;
@@ -278,6 +266,10 @@ url(../images/hero.jpg);
 .section-team {
   background-color: var(--section-background-color);
 }
+.team-card {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
 
 .section-title.centered {
   text-align: center;
@@ -303,6 +295,31 @@ url(../images/hero.jpg);
   line-height: 1.19;
   text-align: center;
 }
+.social {
+  display: flex;
+  justify-content: center;
+}
+
+
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: var(--fill-icon);
+}
+
+.social-link:hover,
+.social-link:focus {
+  color: var(--white-text-color);
+  background-color: var(--accent-color);
+}
+.social-link {
+  fill: currentColor;
+}
+
 
 /* Приклади робіт */
 
@@ -320,6 +337,11 @@ url(../images/hero.jpg);
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
+}
+
+.element {
+  border: 1px solid #EEEEEE;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .title.examples {
