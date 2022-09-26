@@ -234,14 +234,13 @@ ul {
 
 .icon-block {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 270px;
   height: 120px;
-  padding: 0;
   background-color: var(--section-background-color);
   border-radius: 4px;
-  background-position: center;
   margin-bottom: 30px;
-  justify-content: center;
 }
 
 .title-capletters {
@@ -280,10 +279,6 @@ ul {
   flex-direction: row;
 }
 
-/* .social .social-icon {
-  background-color: var(--white-text-color);
-} */
-
 .section-team {
   background-color: var(--section-background-color);
 }
@@ -302,7 +297,7 @@ ul {
   margin-bottom: 10px;
 }
 
-.title-people {
+.title-text.centered {
   margin-bottom: 16px;
 }
 
@@ -326,6 +321,7 @@ ul {
 .social {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 10px;
 }
 
@@ -371,9 +367,10 @@ ul {
 
 .our-partners-link {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 170px;
   height: 90px;
-  justify-content: center;
   border: 1px solid var(--fill-icon);
   border-radius: 4px;
   margin: 0 auto;
@@ -385,6 +382,8 @@ ul {
 
 .our-partners-logo {
   fill: var(--fill-icon);
+  width: 106px;
+  height: 60px;
 }
 .our-partners-link:hover .our-partners-logo {
   fill: var(--accent-color);
